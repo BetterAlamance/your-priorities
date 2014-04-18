@@ -53,20 +53,11 @@
       - if user_signed_in?
         %li.has-dropdown
           %a{:href => "#"}
-            = tr("Account","here")
+            = current_user.name
           %ul.dropdown
             %li.has-dropdown
-              %a{:href => "#"}
-                = Tolk::Config.mapping[I18n.locale.to_s]
-              %ul.dropdown
-                = render :partial => "shared/language_selection"
             = render :partial => "shared/user_menu"
       - else
-        %li.has-dropdown
-          %a{:href => "#"}
-            = Tolk::Config.mapping[I18n.locale.to_s]
-          %ul.dropdown
-            = render :partial => "shared/language_selection"
       %li.has-dropdown
         %a{href: "#"}
           = tr("About","here")

@@ -3,6 +3,8 @@
 %li
   = link_to tr("Configuration", "view/shared/_menu"), "/instances/#{Instance.current.id}/edit"
 %li
+  = link_to tr("API settings", "view/shared/_menu"), "/instances/#{Instance.current.id}/apis"
+%li
   = link_to tr("Buddy icon", "view/shared/_menu"), "/admin/buddy_icon"
 %li
   = link_to tr("Master statistics", "view/shared/_menu"), "/admin/master_statistics"
