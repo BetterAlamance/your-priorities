@@ -35,3 +35,4 @@ private/*
 *.output
 *.pid
 .sass-cache/
+nohup.out
