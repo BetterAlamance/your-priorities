@@ -104,6 +104,7 @@ group :development do
   gem 'better_errors'
   gem 'therubyracer'
   gem "awesome_print"
+  gem "seed_dump","0.5.3"
 end
 
 group :production do

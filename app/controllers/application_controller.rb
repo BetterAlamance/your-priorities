@@ -628,12 +628,12 @@ class ApplicationController < ActionController::Base
       @items[item_count+=1]=[tr("Revisions ({count})", "view/ideas/_nav", :count => @idea.idea_revisions_count), idea_idea_revision_url(@idea,@idea.idea_revision_id)]
     end
     if current_user and current_user.id == @idea.user_id
-      @items[item_count+=1]=[tr("New revision", "view/ideas/_nav"), new_idea_idea_revision_url(@idea)]
+      @items[item_count+=1]=[tr("Revise your idea", "view/ideas/_nav"), new_idea_idea_revision_url(@idea)]
     end
-    if current_user and current_user.capitals_count>0 and @idea.status == 'published'
-      @items[item_count+=1]=[tr("Buy an ad", "view/ideas/_nav"), new_idea_ad_url(@idea)]
-    end
-    @items[item_count+=1]=[tr("Activities", "view/ideas/_nav"), activities_idea_url(@idea)]
+#    if current_user and current_user.capitals_count>0 and @idea.status == 'published'
+#      @items[item_count+=1]=[tr("Buy an ad", "view/ideas/_nav"), new_idea_ad_url(@idea)]
+#    end
+    @items[item_count+=1]=[tr("Recent activity", "view/ideas/_nav"), activities_idea_url(@idea)]
     if current_user and current_user.is_admin?
       @items[item_count+=1]=[tr("Update status", "view/ideas/_nav"), update_status_idea_url(@idea)]
       @items[item_count+=1]=[tr("Edit", "view/ideas/_nav"), edit_idea_url(@idea)]

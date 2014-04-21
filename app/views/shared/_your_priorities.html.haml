@@ -1,5 +1,13 @@
-%br
-%h5
-  = tr("Your Priorities", "here", :user_name => current_user.name)
+.row
+  .large-12.columns
+    %div.right
+      = link_to "/users/additional_information" do
+        = render :partial => "users/pic_50", :locals => {:user => current_user}
+    %div.left
+      %h5
+        = current_user.name
+      %h6
+        = tr("Top Priorities", "here", :user_name => current_user.name)
+
 #your_ideas_container
   = render :partial => "ideas/yours"
