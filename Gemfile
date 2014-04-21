@@ -85,7 +85,7 @@ gem 'workflow'
 #gem "airbrake"
 gem 'jquery-rjs', github: "bikeexchange/jquery-rjs"
 gem 'pry-rails', require: false
-gem 'awesome_print', require: false
+#gem 'awesome_print', require: false
 gem 'htmldiff'
 gem 'acts_as_list'
 #gem 'html5shiv-rails'
