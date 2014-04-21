@@ -5,9 +5,9 @@ begin
   elsif Rails.env.test?
       YourPriorities::Application.config.session_store :cookie_store, key: "_Instance.first.domain_name.test_dev"
   elsif ENV['YRPRI_ALL_DOMAIN']
-    YourPriorities::Application.config.session_store :cookie_store, key: "_#{Instance.first.domain_name.gsub(".","_")}_production_all_domain", :domain => ".#{Instance.first.domain_name}"
+    YourPriorities::Application.config.session_store :cookie_store, key: "_my_app_production"
   else
-    YourPriorities::Application.config.session_store :cookie_store, key: "_#{Instance.first.domain_name.gsub(".","_")}_production"
+    YourPriorities::Application.config.session_store :cookie_store, key: "_my_app_production"
   end
 end
 
