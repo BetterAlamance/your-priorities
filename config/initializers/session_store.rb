@@ -7,7 +7,7 @@ begin
   elsif ENV['YRPRI_ALL_DOMAIN']
     YourPriorities::Application.config.session_store :cookie_store, key: "_#{Instance.first.domain_name.gsub(".","_")}_production_all_domain", :domain => ".#{Instance.first.domain_name}"
   else
-    YourPriorities::Application.config.session_store :cookie_store, key: "_#{Instance.first.domain_name.gsub(".","_")}_production"
+	YourPriorities::Application.config.session_store :cookie_store, key: "_my_app_production"  
   end
 end
 

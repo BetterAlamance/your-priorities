@@ -36,3 +36,7 @@ private/*
 *.pid
 .sass-cache/
 nohup.out
+
+config/facebooker.yml.dist
+
+config/facebooker.yml.dist
