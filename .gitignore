@@ -16,7 +16,6 @@ config/contacts.yml
 db/sphinx/*
 config/development.sphinx.conf
 config/database.yml
-config/facebooker.yml
 solr/index
 solr/*.pid
 .tmp*
@@ -36,7 +35,3 @@ private/*
 *.pid
 .sass-cache/
 nohup.out
-
-config/facebooker.yml.dist
-
-config/facebooker.yml.dist

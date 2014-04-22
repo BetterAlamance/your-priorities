@@ -8,14 +8,13 @@
 
 # Create Categories
 i = Instance.new
-i.name = "Your Instance"
-i.description = "Your Instance"
-i.domain_name = "yourdomain.com"
+i.name = "Better Alamance Ideas"
+i.description = "Your ideas. Our community."
+i.domain_name = "herokuapp.com"
 i.layout = "application"
-i.admin_name = "Your Admin Name"
-i.admin_email = "admin@yourdomain.com"
-i.email = "admin@yourdomain.com"
-i.layout = "application"
+i.admin_name = "Derek Lackaff"
+i.admin_email = "admin@betteralamance.org"
+i.email = "admin@betteralamance.org"
 i.save(:validation=>false)
 
 
@@ -23,6 +22,11 @@ si = SubInstance.new
 si.short_name = "default"
 si.name = "Your Default Sub Instance"
 si.save(:validation=>false)
+
+ba = SubInstance.new
+ba.short_name = "ba-ideas"
+ba.name = "Better Alamance Ideas"
+ba.save(:validation=>false)
 
 Instance.current = i
 SubInstance.current = si
