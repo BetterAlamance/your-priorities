@@ -245,5 +245,5 @@ Devise.setup do |config|
   # end
 
   config.omniauth :facebook, ENV["FACEBOOKER2_APP_ID"], ENV["FACEBOOKER2_API_KEY"]
-  config.omniauth :twitter, ENV["TWITTER_KEY"], ENV["TWITTER_SECRET"]
+  config.omniauth :twitter, "TWITTER_KEY", "TWITTER_SECRET"
 end
