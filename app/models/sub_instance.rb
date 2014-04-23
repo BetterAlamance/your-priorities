@@ -21,7 +21,7 @@ class SubInstance < ActiveRecord::Base
   validates_attachment_size :external_link_logo, :less_than => 5.megabytes
   validates_attachment_content_type :external_link_logo, :content_type => ['image/jpeg', 'image/png', 'image/gif']
 
-  has_attached_file :top_banner, :styles => { :icon_full => "1024x100#",
+  has_attached_file :top_banner, :styles => { :icon_full => "964x153#",
                                               :preview => "102x10#" },
                     :storage => PAPERCLIP_STORAGE_MECHANISM,
                     :s3_credentials => S3_CREDENTIALS
