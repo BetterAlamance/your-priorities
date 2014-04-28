@@ -45,6 +45,9 @@
       = yield :layout
     .large-3.columns
       = render :partial=>"shared/right_column"
+  .row
+    .large-12.columns
+      =render :partial => "shared/footer"
   - if ["donations","subscriptions","subscription_accounts"].include?(controller_name)
     = javascript_include_tag "https://bridge.paymill.com/"
   = render :partial => "shared/facebook_footer"

@@ -41,6 +41,10 @@
         %a{href: "/network"}
           = tr("People","here")
       %li.divider
+      %li{:class=>controller_name=="feed" ? "active" : ""}
+        %a{href: "/feed/activities"}
+          = tr("Activity","here")
+      %li.divider
     %ul.right
       %li.top-bar-new-idea
         - if SubInstance.current.block_new_ideas and SubInstance.current.block_new_ideas!=""
@@ -57,6 +61,7 @@
           %ul.dropdown
             %li.has-dropdown
             = render :partial => "shared/user_menu"
+        %li.divider
       - else
       %li.has-dropdown
         %a{href: "#"}
