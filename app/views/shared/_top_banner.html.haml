@@ -5,27 +5,27 @@
         &nbsp;
     .large-4.columns
       .panel-mine
-        %center
-          - unless SubInstance.current.short_name=="default"
-            %h3{:style=>"padding-top:20px;"}
-              = SubInstance.current.name
-            - if false
-              %p
-                %b
-                  - if SubInstance.current.description and SubInstance.current.description!=""
-                    = SubInstance.current.description
-                  - else
-                    = Instance.current.description
-          - if not @block_new_ideas and not action_name=="world"
-            %span.icn.icn-add
-          - elsif false and action_name=="world"
-            %div.add
-              %a.button{:href => "/subscription_accounts/new"}
-                %span.left
-                  = tr("GET {instance_name}","view/ideas/_nav", :instance_name=>Instance.current.name)
-                %span.icn.icn-add
-        %center.hide-for-medium-down
-          = "<div class='fb-like' data-href='#{Instance.current.homepage_url}' data-send='false' data-layout='button_count' data-width='200' data-show-faces='false'></div>".html_safe
+-#        %center
+-#          - unless SubInstance.current.short_name=="default"
+-#            %h3{:style=>"padding-top:20px;"}
+-#              = SubInstance.current.name
+-#            - if false
+-#              %p
+-#                %b
+-#                  - if SubInstance.current.description and SubInstance.current.description!=""
+-#                    = SubInstance.current.description
+-#                  - else
+-#                    = Instance.current.description
+-#          - if not @block_new_ideas and not action_name=="world"
+-#            %span.icn.icn-add
+-#          - elsif false and action_name=="world"
+-#            %div.add
+-#              %a.button{:href => "/subscription_accounts/new"}
+-#                %span.left
+-#                  = tr("GET {instance_name}","view/ideas/_nav", :instance_name=>Instance.current.name)
+-#                %span.icn.icn-add
+-#        %center.hide-for-medium-down
+-#          = "<div class='fb-like' data-href='#{Instance.current.homepage_url}' data-send='false' data-layout='button_count' data-width='200' data-show-faces='false'></div>".html_safe
     .large-4.columns
       %div
         &nbsp;
