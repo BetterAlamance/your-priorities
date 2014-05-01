@@ -1,27 +1,31 @@
 .row
-	.large-4.columns
-		%ul.unstyled
-			%li
-				%b Better Alamance: Ideas			
-			- @about_pages.each do |page|
-				- unless page.hide_from_menu or (page.hide_from_menu_unless_admin and (!current_user or (current_user and !current_user.is_admin?)))
-					%li
-						#{link_to page.title.from_localized_yaml, :controller => "pages", :action => "show", :id=>page.id}
-	.large-4.columns
-		%ul.unstyled
-			%li
-				%b About Better Alamance
-			%li <a href="http://betteralamance.org/about">About the Project</a>
-			%li <a href="http://betteralamance.org/team">Project Team</a>
-			%li <a href="http://betteralamance.org/publicity">Promotional Materials</a>
-			%li <a href="http://betteralamance.org/press">Media Coverage</a>
-			%li <a href="http://betteralamance.org/privacy">Privacy Policy</a>
-	.large-4.columns
-		%ul.unstyled
-			%li
-				%b Connect with us
-			%li <a href="http://betteralamance.org/facebook">Facebook</a> <div class='fb-like' data-href='#{Instance.current.homepage_url}' data-send='false' data-layout='button_count' data-width='200' data-show-faces='false'></div>
-			%li <a href="http://betteralamance.org/twitter">Twitter</a>
-			%li <a href="http://betteralamance.org/googleplus">Google+</a>
-			%li <a href="http://betteralamance.org/youtube">YouTube</a>
-			%li <script type="text/javascript">eval(decodeURIComponent('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%27%3c%61%20%68%72%65%66%3d%5c%22%6d%61%69%6c%74%6f%3a%69%6e%66%6f%40%62%65%74%74%65%72%61%6c%61%6d%61%6e%63%65%2e%6f%72%67%5c%22%3e%45%6d%61%69%6c%3c%5c%2f%61%3e%27%29%3b'))</script>
+	.large-12.columns
+		%p
+		.row.footer 
+			.large-2.columns
+				&nbsp;
+			.large-3.columns
+				%h2.footertitle Better Alamance: Ideas
+				%ul.unstyled
+					- @about_pages.each do |page|
+						- unless page.hide_from_menu or (page.hide_from_menu_unless_admin and (!current_user or (current_user and !current_user.is_admin?)))
+							%li
+								#{link_to page.title.from_localized_yaml, :controller => "pages", :action => "show", :id=>page.id}
+			.large-3.columns
+				%h2.footertitle The Better Alamance Project
+				%ul.unstyled
+					%li <a href="http://betteralamance.org/about">About the Project</a>
+					%li <a href="http://betteralamance.org/team">Project Team</a>
+					%li <a href="http://betteralamance.org/publicity">Promotional Materials</a>
+					%li <a href="http://betteralamance.org/press">Media Coverage</a>
+					%li <a href="http://betteralamance.org/privacy">Privacy Policy</a>
+			.large-3.columns
+				%h2.footertitle Connect With Us
+				%ul.unstyled
+					%li <a href="http://betteralamance.org/facebook">Facebook</a>
+					%li <a href="http://betteralamance.org/twitter">Twitter</a>
+					%li <a href="http://betteralamance.org/googleplus">Google+</a>
+					%li <a href="http://betteralamance.org/youtube">YouTube</a>
+					%li <script type="text/javascript">eval(decodeURIComponent('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%27%3c%61%20%68%72%65%66%3d%5c%22%6d%61%69%6c%74%6f%3a%69%6e%66%6f%40%62%65%74%74%65%72%61%6c%61%6d%61%6e%63%65%2e%6f%72%67%5c%22%3e%45%6d%61%69%6c%3c%5c%2f%61%3e%27%29%3b'))</script>
+			.large-1.columns
+				&nbsp;
