@@ -42,7 +42,7 @@
             = f.text_area :description, :id => 'ideaContent', :button => 'submit', :rows => 10, :class=>"col_text_area", :maxLength => 550
     .large-6.columns
       %h4
-        = tr("Why should people support your #{IDEA_TOKEN}?", "views/ideas/form")
+        = tr("Why support your #{IDEA_TOKEN}?", "views/ideas/form")
       .field_label
       = f.fields_for(:points) do |point_form|
         = render :partial=>"points/form", :locals=>{:point_form=>point_form, :force_point_for=>true}
@@ -55,8 +55,8 @@
           %br
           = submit_tag tr("Submit your #{IDEA_TOKEN} and point", "view/ideas/_form"), :class => "button"
 :javascript
-  ideaNameContentTxt = "#{tr("Make a good and descriptive title for your #{IDEA_TOKEN}","ideas/new")}";
-  ideaContentTxt = "#{tr("Explain your idea in a few paragraphs and try to capture its essence clearly.","ideas/new")}";
+  ideaNameContentTxt = "#{tr("Provide a short and descriptive title for your #{IDEA_TOKEN}.","ideas/new")}";
+  ideaContentTxt = "#{tr("Explain your idea. Include 'when' and 'where' information as appropriate.","ideas/new")}";
 
   jQuery("#ideaNameContent").DefaultValue(ideaNameContentTxt);
   jQuery("#ideaContent").DefaultValue(ideaContentTxt);
