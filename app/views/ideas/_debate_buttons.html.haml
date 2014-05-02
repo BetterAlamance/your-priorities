@@ -13,7 +13,7 @@
           .disabled
             .idea_add{:id => "idea_add_endorse_#{idea.id}"}
               = link_to "#", :title => current_sub_instance.block_endorsements do
-                = tr("UP", "view/ideas").upcase+" #{idea.up_endorsements_count}"
+                = tr("support ", "view/ideas")+" [#{idea.up_endorsements_count}]"
       - else
         .endorse_button
           .idea_debate_spinner.spinner_align{:id => "idea_debate_spinner_endorse_#{idea.id}"}
@@ -25,14 +25,14 @@
                 :class => "idea_add_link",                                                  |
                 :title => tr("Remove vote", "view/ideas") do
                 .idea_debate_spinner.spinner_align{:id => "idea_debate_spinner_endorse_#{idea.id}"}
-                = tr("UP", "view/ideas").upcase+" #{idea.up_endorsements_count}"
+                = tr("support ", "view/ideas")+" [#{idea.up_endorsements_count}]"
       - if @block_endorsements
         .oppose_button.disabled
           .idea_debate_spinner.spinner_align{:id => "idea_debate_spinner_oppose_#{idea.id}"}
           .disabled
             .idea_add{:id => "idea_add_oppose_#{idea.id}"}
               = link_to "#", :title => current_sub_instance.block_endorsements do
-                = tr("DOWN", "view/ideas")+" #{idea.down_endorsements_count}"
+                = tr("oppose ", "view/ideas")+" [#{idea.down_endorsements_count}]"
       - else
         .oppose_button
           .idea_debate_spinner.spinner_align{:id => "idea_debate_spinner_oppose_#{idea.id}"}
@@ -42,7 +42,7 @@
               :remote => true,                                                                                                                                         |
               :class => "idea_add_link", |
               :title => tr("Vote this down", "view/ideas") do
-              = tr("DOWN", "view/ideas")+" #{idea.down_endorsements_count}"
+              = tr("oppose", "view/ideas")+" [#{idea.down_endorsements_count}]"
     - else
       - # DOWN STATE
       - if @block_endorsements
@@ -51,7 +51,7 @@
           .disabled
             .idea_add{:id => "idea_add_endorse_#{idea.id}"}
               = link_to "#", :title => current_sub_instance.block_endorsements do
-                = tr("UP", "view/ideas").upcase+" #{idea.up_endorsements_count}"
+                = tr("support ", "view/ideas")+" [#{idea.up_endorsements_count}]"
       - else
         .endorse_button
           .idea_debate_spinner.spinner_align{:id => "idea_debate_spinner_endorse_#{idea.id}"}
@@ -63,14 +63,14 @@
               'data-loader-name' => "external_spinner",                    |
               :class => "idea_add_link", |
               :title =>  tr("Vote this up", "view/ideas") do
-              = tr("UP", "view/ideas").upcase+" #{idea.up_endorsements_count}"
+              = tr("support ", "view/ideas")+" [#{idea.up_endorsements_count}]"
       - if @block_endorsements
         .oppose_button.disabled
           .idea_debate_spinner.spinner_align{:id => "idea_debate_spinner_oppose_#{idea.id}"}
           .disabled
             .idea_add{:id => "idea_add_oppose_#{idea.id}"}
               = link_to "#", :title => current_sub_instance.block_endorsements do
-                = tr("DOWN", "view/ideas")+" #{idea.down_endorsements_count}"
+                = tr("oppose ", "view/ideas")+" [#{idea.down_endorsements_count}]"
       - else
         .oppose_button
           .idea_debate_spinner.spinner_align{:id => "idea_debate_spinner_oppose_#{idea.id}"}
@@ -83,7 +83,7 @@
                 'data-loader-name' => "external_spinner",                                                   |
                 :class => "idea_add_link",                                                  |
                 :title => tr("Remove vote", "view/ideas") do
-                = tr("DOWN", "view/ideas")+" #{idea.down_endorsements_count}"
+                = tr("oppose ", "view/ideas")+" [#{idea.down_endorsements_count}]"
   - else
     - # NOT VOTED STATE
     - if @block_endorsements
@@ -92,7 +92,7 @@
         .disabled
           .idea_add{:id => "idea_add_endorse_#{idea.id}"}
             = link_to "#", :title => current_sub_instance.block_endorsements do
-              = tr("UP", "view/ideas").upcase+" #{idea.up_endorsements_count}"
+              = tr("support ", "view/ideas")+" [#{idea.up_endorsements_count}]"
     - else
       .endorse_button
         .idea_debate_spinner.spinner_align{:id => "idea_debate_spinner_endorse_#{idea.id}"}
@@ -104,14 +104,14 @@
             'data-loader-name' => "external_spinner",                  |
             :class => "idea_add_link",
             :title =>  tr("Vote this up", "view/ideas") do
-            = tr("UP", "view/ideas").upcase+" #{idea.up_endorsements_count}"
+            = tr("support ", "view/ideas")+" [#{idea.up_endorsements_count}]"
     - if @block_endorsements
       .oppose_button.disabled
         .idea_debate_spinner.spinner_align{:id => "idea_debate_spinner_oppose_#{idea.id}"}
         .disabled
           .idea_add{:id => "idea_add_oppose_#{idea.id}"}
             = link_to "#", :title => current_sub_instance.block_endorsements do
-              = tr("DOWN", "view/ideas")+" #{idea.down_endorsements_count}"
+              = tr("oppose ", "view/ideas")+" [#{idea.down_endorsements_count}]"
     - else
       .oppose_button
         .idea_debate_spinner.spinner_align{:id => "idea_debate_spinner_oppose_#{idea.id}"}
@@ -123,7 +123,7 @@
             'data-loader-name' => "external_spinner",                   |
             :class => "idea_add_link",
             :title =>  tr("Vote this down", "view/ideas") do
-            = tr("DOWN", "view/ideas")+" #{idea.down_endorsements_count}"
+            = tr("oppose ", "view/ideas")+" [#{idea.down_endorsements_count}]"
 :javascript
     $("#idea_add_endorse_#{idea.id}").on('ajax:before', function(event) {
        $("#idea_add_endorse_#{idea.id}").first().click(function(e) {
