@@ -11,14 +11,13 @@
   .large-7.columns
     %div.sib_idea
       = render :partial => "ideas/about_idea", :locals => {:idea => idea, :endorsement => endorsement }
-  .large-3.columns
+  .large-4.columns
     %h5
       = tr("Vote","here")
     = render :partial => "ideas/debate_buttons", :locals => {:idea => idea, :endorsement => endorsement, :region=>"idea_inline", :force_debate_to_new=>@ideas ? false : true }
     = render :partial => "ideas/idea_social_buttons", :locals => {:idea => @idea ? @idea : idea, :endorsement => @endorsement, :region=>"idea_inline" }
     - if @idea and current_user and current_user.is_admin?
       = link_to tr("Delete", "view/ideas/_nav"), @idea, :title => tr("Are you sure you want to permanently delete {idea_name}?", "view/ideas/_nav", :idea_name => @idea.name), :confirm => tr("Are you sure you want to permanently delete {idea_name}?", "view/ideas/_nav", :idea_name => @idea.name), :method => :delete
-  .large-1.columns
 .row
   .large-12.columns
     - unless @idea
