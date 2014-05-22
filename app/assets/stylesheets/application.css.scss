@@ -1,13 +1,13 @@
 //
 // Foundation Variables
-//
+// --- BA NEW VERSION VERSION ---
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
 $base-font-size: 16px !default;
 
 // $base-line-height is 24px while $base-font-size is 16px
-$base-line-height: 150%;
+// $base-line-height: 150%;
 
 // This is the default html and body font-size for the base em value.
 
@@ -29,11 +29,11 @@ $em-base: $base-font-size;
 
 $default-float: left;
 
-$body-bg: #fff;
-$body-font-color: #222;
+// $body-bg: #fff;
+// $body-font-color: #222;
 $body-font-family: "Open Sans",Helvetica,Arial,sans-serif;;
-$body-font-weight: normal;
-$body-font-style: normal;
+// $body-font-weight: normal;
+// $body-font-style: normal;
 
 // Font-smoothing
 
@@ -45,7 +45,7 @@ $font-smoothing: antialiased;
 
 // Colors
 
-$primary-color: #03c;
+$primary-color: #33a;
 $secondary-color: #327bb0;
 $alert-color: #c60f13;
 $success-color: #5da423;
@@ -90,11 +90,11 @@ $shiny-edge-active-color: inherit;
 
 // Media Queries
 
-$small-screen: 320px;
-$medium-screen: 960px;
-$large-screen: 1440px;
+// $small-screen: 768px;
+// $medium-screen: 1280px;
+// $large-screen: 1440px;
 
-$screen: "only screen";
+// $screen: "only screen";
 // $small: "only screen and (min-width: #{$small-screen})";
 // $medium: "only screen and (min-width: #{$medium-screen})";
 // $large: "only screen and (min-width: #{$large-screen})";
@@ -137,59 +137,59 @@ $screen: "only screen";
 
 // Heading font styles
 
-$header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$header-font-weight: bold;
-$header-font-style: normal;
-$header-font-color: #222;
-$header-line-height: 1.4;
-$header-top-margin: .2em;
-$header-bottom-margin: .5em;
-$header-text-rendering: optimizeLegibility;
+// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $header-font-weight: bold;
+// $header-font-style: normal;
+// $header-font-color: #222;
+// $header-line-height: 1.4;
+// $header-top-margin: .2em;
+// $header-bottom-margin: .5em;
+// $header-text-rendering: optimizeLegibility;
 
 // Heading font sizes
 
-$h1-font-size: emCalc(42px);
-$h2-font-size: emCalc(38px);
-$h3-font-size: emCalc(24px);
-$h4-font-size: emCalc(20px);
-$h5-font-size: emCalc(18px);
+$h1-font-size: emCalc(36px);
+$h2-font-size: emCalc(25px);
+$h3-font-size: emCalc(20px);
+$h4-font-size: emCalc(18px);
+$h5-font-size: emCalc(16px);
 $h6-font-size: 1em;
 
 // Subheaders
 
-$subheader-line-height: 1.4;
-$subheader-font-color: lighten($header-font-color, 30%);
-$subheader-font-weight: 300;
-$subheader-top-margin: .2em;
-$subheader-bottom-margin: .5em;
+// $subheader-line-height: 1.4;
+// $subheader-font-color: lighten($header-font-color, 30%);
+// $subheader-font-weight: 300;
+// $subheader-top-margin: .2em;
+// $subheader-bottom-margin: .5em;
 
 // <small> styling
 
-$small-font-size: 60%;
-$small-font-color: lighten($header-font-color, 30%);
+// $small-font-size: 60%;
+// $small-font-color: lighten($header-font-color, 30%);
 
 // Paragraphs
 
-$paragraph-font-family: inherit;
-$paragraph-font-weight: normal;
-$paragraph-font-size: 1em;
-$paragraph-line-height: 1.6;
-$paragraph-margin-bottom: emCalc(20px);
-$paragraph-aside-font-size: emCalc(14px);
-$paragraph-aside-line-height: 1.35;
-$paragraph-aside-font-style: italic;
+// $paragraph-font-family: inherit;
+// $paragraph-font-weight: normal;
+// $paragraph-font-size: 1em;
+// $paragraph-line-height: 1.6;
+// $paragraph-margin-bottom: emCalc(20px);
+// $paragraph-aside-font-size: emCalc(14px);
+// $paragraph-aside-line-height: 1.35;
+// $paragraph-aside-font-style: italic;
 
 // <code> tags
 
-$code-color: darken($alert-color, 15%);
-$code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
-$code-font-weight: bold;
+// $code-color: darken($alert-color, 15%);
+// $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
+// $code-font-weight: bold;
 
 // Anchors
 
-$anchor-text-decoration: none;
-$anchor-font-color: darken($primary-color, 10%);
-$anchor-font-color-hover: darken($primary-color, 15%);
+// $anchor-text-decoration: none;
+// $anchor-font-color: $primary-color;
+// $anchor-font-color-hover: darken($primary-color, 5%);
 
 // <hr> element
 
@@ -255,7 +255,7 @@ $anchor-font-color-hover: darken($primary-color, 15%);
 
 // Base for lots of form spacing and positioning styles
 
-$form-spacing: emCalc(16px);
+// $form-spacing: emCalc(16px);
 
 // Labels
 
@@ -340,7 +340,7 @@ $button-font-med: emCalc(16px);
 $button-font-tny: emCalc(11px);
 $button-font-sml: emCalc(13px);
 $button-font-lrg: emCalc(20px);
-$button-font-weight: bold;
+$button-font-weight: normal;
 $button-font-align: center;
 
 // Various hover effects.
@@ -1013,13 +1013,13 @@ $panel-bg-4: #fff;
 
 // Border size
 
-$section-border-size: 1px;
-$section-border-style: solid;
-$section-border-color: #ccc;
+// $section-border-size: 1px;
+// $section-border-style: solid;
+// $section-border-color: #ccc;
 
 // Font controls
 
-$section-font-size: emCalc(16px);
+// $section-font-size: emCalc(14px);
 
 // Control the color of the background and some size options
 
@@ -1208,11 +1208,11 @@ $section-font-size: emCalc(16px);
 
 // Background color for the top bar
 
-$topbar-bg: #57AB46 !default;
+$topbar-bg: #57ab46 !default;
 
 // Height and margin
 
-$topbar-height: 45px;
+// $topbar-height: 45px;
 // $topbar-margin-bottom: emCalc(30px);
 
 // Control Input height for top bar
@@ -1226,9 +1226,9 @@ $topbar-height: 45px;
 
 // Style the top bar dropdown elements
 
-$topbar-dropdown-bg: #57AB46;
+$topbar-dropdown-bg: #57ab46;
 $topbar-dropdown-link-color: #111;
-$topbar-dropdown-link-bg: #57AB46;
+$topbar-dropdown-link-bg: lighten($topbar-bg, 20%);
 
 $topbar-dropdown-toggle-size: 5px;
 $topbar-dropdown-toggle-color: #111;
@@ -1237,15 +1237,15 @@ $topbar-dropdown-toggle-alpha: 0.5;
 // Set the link colors and styles for top-level nav
 
 $topbar-link-color: #111;
-$topbar-link-color-hover: #111;
-$topbar-link-color-active: #111;
-$topbar-link-weight: bold;
-$topbar-link-font-size: emCalc(13px);
-$topbar-link-hover-lightness: -30%; // Darken by 30%
-$topbar-link-bg-hover: lighten($topbar-bg, 10%);
-$topbar-link-bg-active: lighten($topbar-bg, 10%);
+$topbar-link-color-hover: #222;
+$topbar-link-color-active: #222;
+// $topbar-link-weight: bold;
+// $topbar-link-font-size: emCalc(13px);
+// $topbar-link-hover-lightness: -30%; // Darken by 30%
+$topbar-link-bg-hover: lighten($topbar-bg, 20%);
+$topbar-link-bg-active: lighten($topbar-bg, 20%);
 
-// $topbar-dropdown-label-color: #f00;
+//$topbar-dropdown-label-color: #f00;
 // $topbar-dropdown-label-text-transform: uppercase;
 // $topbar-dropdown-label-font-weight: bold;
 // $topbar-dropdown-label-font-size: emCalc(10px);
@@ -1363,7 +1363,7 @@ a {
 }
 
 .odd-idea-container {
-  //background-color: #f7F7F7;
+  background-color: #f7F7F7;
   background-color: #fafafa;
   border: solid 1px;
   border-color: #ddd;
@@ -1371,7 +1371,7 @@ a {
 }
 
 .even-idea-container {
-  //background-color: #efefef;
+  background-color: #efefef;
   background-color: #fafafa;
   border: solid 1px;
   border-color: #ddd;
@@ -1388,8 +1388,6 @@ a {
 }
 
 .top-banner-custom {
-  background-position: left center;
-  background-repeat: no-repeat;
   height: 160px;
 }
 
@@ -1459,15 +1457,9 @@ a {
   margin-bottom: 10px;}
 
 .label {
-  // border: 1px solid #bbb;
-  background-color: #fff;	//lighten($primary-color, 40%);
-  color: #111;
-  margin-bottom: 10px;
-}
-
-.characters {
-	color: #3c3;
-	font-size: 90%;
+  border: 1px solid #bbb;
+  background-color: #ddd;//lighten($primary-color, 40%);
+  color: #333;
 }
 
 .next_idea_next_image  {
@@ -1547,8 +1539,8 @@ a {
 
 
 .button {
-  font-size: 1.2em;
-  border-radius: 4px;
+  font-size: 1em;
+  border-radius: $global-radius;
 }
 
 #login {	border:1px solid #ccc; border-radius:15px; padding:15px; margin-top:35px; }
@@ -1565,7 +1557,7 @@ a {
   height: 30px !important;
 }
 
-.top-bar-section ul li>a.button {
+.top-bar-section ul li > a.button {
   padding-top: 2px;
 }
 
@@ -1596,4 +1588,10 @@ a {
 
 .top_margin{
   margin-top: 20px;
+}
+
+.idea_add_link > span {
+  @media screen and (max-width: 480px) {
+	display: none;
+  }
 }
