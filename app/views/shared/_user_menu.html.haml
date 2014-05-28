@@ -12,11 +12,7 @@
         = tr("{count} warning", "view/layouts/basic", :count => current_user.warnings_count)
 %li
   = link_to tr("Logout", "view/shared/_user_info"), destroy_user_session_path, method: :delete
-- if user_signed_in? && current_user.is_admin?
-  = render :partial=>"shared/user_menu_admin"
-- if user_signed_in? && current_user.is_root?
-  = render :partial=>"shared/user_menu_root"
 - @about_pages.each do |page|
   - unless page.hide_from_menu or (page.hide_from_menu_unless_admin and (!current_user or (current_user and !current_user.is_admin?)))
-      %li
-        #{link_to page.title.from_localized_yaml, :controller => "pages", :action => "show", :id=>page.id}
+    %li
+      #{link_to page.title.from_localized_yaml, :controller => "pages", :action => "show", :id=>page.id}
