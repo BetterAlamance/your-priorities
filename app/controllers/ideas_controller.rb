@@ -762,7 +762,7 @@ class IdeasController < ApplicationController
       if @saved
         session[:show_tagging]=true
         format.html {
-          flash[:notice] = tr("Thanks for adding {idea_name}", "controller/ideas", :idea_name => @idea.name)
+          flash[:notice] = tr("Thanks for adding {idea_name}. Now Like and Tweet your idea so your friends can support it too!", "controller/ideas", :idea_name => @idea.name)
           redirect_to @idea
         }
         format.js {

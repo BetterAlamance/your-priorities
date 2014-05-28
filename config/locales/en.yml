@@ -125,7 +125,7 @@ en:
   8fa5aa01c62dc6faf7487902415f1bd8: "You cannot change a idea's name once other people have endorsed it."
   d34150ff39a9d589994e12317a704f2d: "First you need to fill out this quick form and agree to the rules,then you can start adding your ideas."
   5c35c398aa64ff280e2b54d3586d23ae: "This website is closed for submission of new ideas."
-  fc2e12b5aff1b388bc309a96bccb3f9b: "Thanks for adding %{idea_name}"
+  e836e2541ba129fd4014e20e600b5ceb: "Thanks for adding %{idea_name}. Now Like and Tweet your idea so your friends can support it too!"
   e7f64f43f31ee8796bf69006c445dc04: "Saved %{idea_name}"
   ab12c7f49bc282b332c3130adf3ad7b2: "Status updated with %{status_text}"
   538221f674906bfd09c25c335cefe54d: "Thanks for bringing this to our attention"
