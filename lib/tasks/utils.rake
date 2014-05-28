@@ -62,6 +62,48 @@ CODE_TO_SHORTNAME = {"AE"=>"uae", "LY"=>"lybia", "VA"=>"vatican",
                      "PS"=>"ps", "GB"=>"uk", "SY"=>"syria", "RU"=>"russia",
                      "MD"=>"moldova", "LA"=>"lao" }
 namespace :utils do
+  desc "Export sub instance to csv"
+  task :export_sub_instance_to_csv => :environment do
+    sub_instance = SubInstance.where(:short_name=>ENV['SHORT_NAME']).first
+    puts "User email,Idea name,Idea description,Up votes,Down votes,Point name,Point description,Point value"
+    Idea.unscoped.where(:sub_instance_id=>sub_instance.id).each do |idea|
+      puts "#{idea.user.email},\"#{idea.name}\",\"#{idea.description.gsub("\"","''")}\",#{idea.up_endorsers.count},#{idea.down_endorsers.count}"
+      Point.unscoped.where(:idea_id=>idea.id).each do |point|
+        puts ",,,,,\"#{point.name}\",\"#{point.content.gsub("\"","''").gsub("\n"," ")}\",#{point.value>0 ? 'Support' : 'Opposes'}"
+      end
+    end
+  end
+
+  desc "Sub instance stats"
+  task :sub_instance_stats => :environment do
+    #from = SubInstance.where(:short_name=>ENV['SHORT_NAME']).first
+    puts "Space,Users,Ideas,Points,Comments"
+    ["barcombe-hamsey","chailey-wivelsfield","ditchling-westmeston","kingston",
+     "lewes","newhaven","newick","ousevalley-ringmer","peacehaven","plumpton",
+     "saltdean-telscombe-cliffs","seaford.yrpri.org"].each do |short_name|
+      SubInstance.where(:short_name=>short_name).each do |from|
+        puts "#{from.short_name},#{User.unscoped.where(:sub_instance_id=>from.id).count},#{Idea.unscoped.where(:sub_instance_id=>from.id).count},"+
+              "#{Point.unscoped.where(:sub_instance_id=>from.id).count},#{Comment.unscoped.where(:sub_instance_id=>from.id).count}"
+      end
+    end
+
+  end
+
+  desc "Export users from sub instances"
+  task :export_users_from_sub_instances => :environment do
+    #from = SubInstance.where(:short_name=>ENV['SHORT_NAME']).first
+    puts "Space,Name,Email,Sign in count"
+    ["barcombe-hamsey","chailey-wivelsfield","ditchling-westmeston","kingston",
+    "lewes","newhaven","newick","ousevalley-ringmer","peacehaven","plumpton",
+    "saltdean-telscombe-cliffs","seaford.yrpri.org"].each do |short_name|
+      SubInstance.where(:short_name=>short_name).each do |from|
+        User.unscoped.where(:sub_instance_id=>from.id).each do |user|
+          puts "#{from.short_name},#{user.login},#{user.email},#{user.sign_in_count}"
+        end
+      end
+    end
+  end
+
 
   desc "Destroy sub_instances from csv url"
   task :destroy_sub_instances_from_csv_url => :environment do

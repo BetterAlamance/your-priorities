@@ -16,3 +16,7 @@
   = render :partial=>"shared/user_menu_admin"
 - if user_signed_in? && current_user.is_root?
   = render :partial=>"shared/user_menu_root"
+- @about_pages.each do |page|
+  - unless page.hide_from_menu or (page.hide_from_menu_unless_admin and (!current_user or (current_user and !current_user.is_admin?)))
+      %li
+        #{link_to page.title.from_localized_yaml, :controller => "pages", :action => "show", :id=>page.id}
