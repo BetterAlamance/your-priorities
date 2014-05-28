@@ -1,5 +1,7 @@
 #login
   #login_form
+    %h3
+      =tr("Get started now","here")
     - if current_instance.has_facebook_enabled? and (not SubInstance.current.subscription_enabled or (@current_plan and not @current_plan.private_instance))
       #fb_login_link
         = link_to user_omniauth_authorize_path(:facebook), class: 'fb_login_button' do

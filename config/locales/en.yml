@@ -1433,6 +1433,7 @@ en:
   eb457a08ac20a595c400542636ba5041: "%{user_name} Agenda"
   5937779d57816ebda740236d83c49c2b: "Tracks the movement of %{user_name} ideas in the rankings over the last 30 days. The more people who endorse ideas on %{user_name} agenda at a high idea,the higher it rises."
   06361b68360387ac93330f64ed06411c: "The total number of endorsements/oppositions each day"
+  3ab75d052b7cfe0276ebb4ea92d6ccc8: "Get started now"
   4d0a3fc4c46501d3b4d2257820942a5e: "Sign in with %{provider}"
   ad687d822978137450b9ddfbdba26e57: "Sign in with email"
   b6d4223e60986fa4c9af77ee5f7149c5: "Sign in"
